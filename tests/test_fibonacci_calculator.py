@@ -4,7 +4,7 @@ import pytest
 
 def test_fibonacci_zero():
     """Unit тест для функции get_fibonacci_number c n = 0"""
-    with pytest.raises(RecursionError) as exc_info:
+    with pytest.raises(ValueError) as exc_info:
         get_fibonacci_number(0)
     assert str(exc_info.value) == 'Число n должно быть больше 0.'
 
